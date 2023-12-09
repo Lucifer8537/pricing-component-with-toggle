@@ -1,0 +1,14 @@
+<div class="pricing-container">
+  <ng-container *ngFor="let price of pricing">
+    <div [ngClass]="price.selected ? 'selected' : ''" class="pricing">
+      <div class="type">{{ price.type }}</div>
+      <div class="amount line">
+        <span class="dollar">$</span>{{ price.amount }}
+      </div>
+      <div class="feature line">{{ price.storage }} Storage</div>
+      <div class="feature line">{{ price.users }} Users Allowed</div>
+      <div class="feature line">Send up to {{ price.send }}</div>
+      <button class="btn">{{ btnTitle }}</button>
+    </div>
+  </ng-container>
+</div>

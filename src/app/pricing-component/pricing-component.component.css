@@ -1,0 +1,100 @@
+.pricing-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  align-items: center;
+  justify-content: center;
+}
+.pricing {
+  width: fit-content;
+  padding: 25px;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  width: 250px;
+}
+.type {
+  color: hsl(233, 13%, 49%);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.amount {
+  font-weight: 700;
+  color: hsl(232, 13%, 33%);
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  align-items: center;
+  font-size: 50px;
+}
+.dollar {
+  font-size: 25px;
+}
+.feature {
+  color: hsl(233, 13%, 49%);
+  font-weight: 600;
+}
+.line {
+  padding-bottom: 20px;
+  border-bottom: 1px solid hsl(234, 14%, 74%, 0.5);
+  margin-bottom: 20px;
+}
+.btn {
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: -webkit-fill-available;
+  padding: 10px 0px;
+  font-weight: 600;
+  margin-top: 10px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.selected {
+  padding: 40px 25px;
+  background: linear-gradient(
+    to bottom,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  .type,
+  .feature,
+  .amount {
+    color: hsl(240, 78%, 98%);
+  }
+  .line {
+    border-color: hsl(240, 78%, 98%, 0.5);
+  }
+  .btn {
+    background: hsl(240, 78%, 98%);
+    color: hsl(237, 63%, 64%);
+  }
+}
+
+@media (min-width: 769px) {
+  .btn:hover {
+    border: 1px solid hsl(237, 63%, 64%);
+    background: transparent;
+    color: hsl(237, 63%, 64%);
+  }
+  .selected {
+    .btn:hover {
+      border: 1px solid hsl(240, 78%, 98%);
+      background-color: transparent;
+      color: hsl(240, 78%, 98%);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-container {
+    margin-top: 20%;
+    gap: 40px;
+  }
+  .pricing {
+    width: 100%;
+    padding: 10%;
+  }
+}
